@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,12 +9,123 @@
 </head>
 <body>
   <header>
-    <h1>Crie e compartilhe seu evento.</h1>
-    <strong>O primeiro passo é preencher este formulário de inscrição.</strong>
+    <div>
+      <h1>Crie e compartilhe seu evento.</h1>
+      <strong>O primeiro passo é preencher este formulário de inscrição.</strong>
+    </div>
   </header>
 
   <form class="container">
+    <section class="form">
+      <fieldset class="fieldset">
+        <legend>Informações do Evento</legend>
 
+        <label for="title">
+          Título do evento
+          <span>(mínimo 8 caracteres)</span>
+        </label>
+        <input type="text" name="" id="title"
+          class="input-style"
+          placeholder="Meu Novo Evento"
+        />
+
+        <label for="link">
+          Link do evento
+          <span>(comece com https://)</span>
+        </label>
+        <input type="url" name="" id="link"
+          class="input-style"
+          placeholder="https://meuwebsite.com.br/"
+          value="https://"
+        />
+
+        <label for="phone">
+          WhatsApp para contato
+          <span>(somente números)</span>
+        </label>
+        <input type="tel" name="" id="phone"
+          class="input-style"
+          placeholder="00 12345-6789"
+          pattern="[0-9]{2} [0-9]{5}\-[0-9]{4}"
+        />
+
+        <label for="description">Descrição do evento</label>
+        <textarea name="" id="description"
+          class="input-style"
+          row="6" cols="50"
+        ></textarea>
+
+        <label for="category">Categoria</label>
+        <select name="" id="category"
+          class="input-style"
+        >
+          <option disabled selected value="1">Selecione uma opção</option>
+          <option value="1">Ao vivo</option>
+          <option value="2">Podcast</option>
+          <option value="3">Mentoria</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Privacidade</legend>
+
+        <label for="admin-email">
+          E-mail do administrador
+          <span>(digite um email válido)</span>
+        </label>
+        <input type="email" name="" id="admin-email"
+          class="input-style"
+          placeholder="meu@email.com"
+        />
+
+        <label for="password">
+          Senha de acesso para os participantes
+          <span>(mínimo 8 caracteres)</span>
+        </label>
+        <input type="password" name="" id="password"
+          class="input-style"
+          placeholder="********"
+          min="8"
+        />
+
+        <div class="checkbox">
+          <input type="checkbox" name="" id="private"
+            class="input-style"
+          />
+          <label for="private">Evento privado</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dia e hora</legend>
+
+        <div>
+          <label for="date">Data</label>
+          <input type="date" name="" id="date"
+            class="input-style"
+          />
+        </div>
+
+        <div>
+          <label for="from-time">Início</label>
+          <input type="time" name="" id="from-time"
+            class="input-style"
+            value=""
+          />
+        </div>
+
+        <div>
+          <label for="to-time">Fim</lable>
+          <input type="time" name="" id="to-time"
+            class="input-style"
+          />
+        </div>
+      </fieldset>
+    </section>
+
+    <footer>
+      <button type="submit">Criar evento</button>
+    </footer>
   </form>
 </body>
 </html>
